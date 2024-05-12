@@ -10,7 +10,7 @@ public class Phone : MonoBehaviour
     public TMP_Text numaraText; // Butonun üzerinde ne gösterileceðini belirleyen text bileþeni
     public Button[] tuslar;
     public bool polisArandi = false;
-    private string beklenenNumara = "911";
+    private string beklenenNumara = "112";
     private string girilenNumara;
     public AudioClip tusSesi; // Tuþ sesi
     public AudioClip polisSesi; // Polis sesi
@@ -34,18 +34,11 @@ public class Phone : MonoBehaviour
 
             Debug.Log("Polis arandý!");
 
-            StartCoroutine(KapatmaBekle());
+ 
 
         }
 
-        IEnumerator KapatmaBekle()
-        {
-            // 1 saniye bekle
-            yield return new WaitForSeconds(1f);
 
-            // Telefonu kapat
-            phonePanel.SetActive(false);
-        }
     }
 
     public void TaskOnClick(int butonNumarasi)

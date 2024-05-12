@@ -9,8 +9,7 @@ public class KeyCollector : MonoBehaviour
     public bool gotTheKey = false;
 
     public void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("sasi");
+    { 
         if (other.CompareTag("Key"))
         {
             gotTheKey = true;

@@ -1,9 +1,9 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class PoohAI : MonoBehaviour
+public class PoohAI : PoohAI1
 {
-    public float wanderTimer = 5f; // Rastgele dolaþma zaman aralýðý
+    public float wanderTimer = 5f;
 
     private NavMeshAgent agent;
     private float timer;
@@ -13,23 +13,48 @@ public class PoohAI : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         timer = wanderTimer;
 
-        // Ýlk hedefi belirlemek için rastgele bir konum ayarla
         SetRandomDestination();
     }
 
     void Update()
     {
-        // Eðer karakter hedefe ulaþtýysa, yeni bir hedef belirle
-        if (!agent.pathPending && agent.remainingDistance < 0.5f)
+        if (objectToFollow != null && mainCamera != null)
         {
-            SetRandomDestination();
-        }
 
-        timer += Time.deltaTime;
-        if (timer >= wanderTimer)
+            Vector3 viewportPoint = mainCamera.WorldToViewportPoint(objectToFollow.transform.position);
+
+            if (viewportPoint.x > 0 && viewportPoint.x < 1 && viewportPoint.y > 0 && viewportPoint.y < 1 && viewportPoint.z > 0 && !IsObstacleBetweenCameraAndObject())
+            {
+
+                isObjectInView = true;
+                FollowObject();
+            }
+            else
+            {
+                if (!agent.pathPending && agent.remainingDistance < 0.5f)
+                {
+                    SetRandomDestination();
+                }
+
+                timer += Time.deltaTime;
+                if (timer >= wanderTimer)
+                {
+                    SetRandomDestination();
+                    timer = 0;
+                }
+
+                isObjectInView = false;
+            }
+        }
+       
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("Cocuk"))
         {
-            SetRandomDestination();
-            timer = 0;
+            Time.timeScale = 0;
+            Debug.Log("temas etti");
+
         }
     }
 
