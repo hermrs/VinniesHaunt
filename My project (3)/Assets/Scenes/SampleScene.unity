@@ -3168,6 +3168,50 @@ MonoBehaviour:
   rayCount: 20
   raycastAnglemin: -30
   raycastAnglemax: 30
+--- !u!1 &1028184945
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1028184947}
+  - component: {fileID: 1028184946}
+  m_Layer: 0
+  m_Name: PanelController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1028184946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1028184945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a58bc2b42c82c994886772c105b6be2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1028184947
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1028184945}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.49183375, y: -0.24108917, z: -3.1878867}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1070864737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3532,7 +3576,7 @@ CapsuleCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
-  m_ProvidesContacts: 0
+  m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -5372,6 +5416,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1606019218990510552, guid: 48ff340c515704c4a89349fb8c18006d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1928813529}
+    - target: {fileID: 1606019218990510552, guid: 48ff340c515704c4a89349fb8c18006d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
     - target: {fileID: 6091554193179479309, guid: 48ff340c515704c4a89349fb8c18006d, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -5414,6 +5466,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6557224082328869970, guid: 48ff340c515704c4a89349fb8c18006d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6789954782082040238, guid: 48ff340c515704c4a89349fb8c18006d, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6789954782082040238, guid: 48ff340c515704c4a89349fb8c18006d, type: 3}
@@ -5639,9 +5695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69198e218e822c1459cc1456ca608ea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obje1: {fileID: 2106545149}
-  obje2: {fileID: 1156151170}
-  obje3: {fileID: 1928813529}
+  phonePanel: {fileID: 1928813529}
 --- !u!114 &2106545163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5887,3 +5941,4 @@ SceneRoots:
   - {fileID: 894395341}
   - {fileID: 174638566}
   - {fileID: 1990529837}
+  - {fileID: 1028184947}
