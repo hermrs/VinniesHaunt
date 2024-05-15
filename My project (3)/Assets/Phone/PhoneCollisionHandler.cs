@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PhoneCollisionHandler : MonoBehaviour
+public class PhoneCollisionHandler : MonoBehaviour, PanelOpener
 {
     private bool canActivate = false;
     public GameObject phonePanel;
@@ -11,7 +11,7 @@ public class PhoneCollisionHandler : MonoBehaviour
     {
         if (canActivate && Input.GetKeyDown(KeyCode.E))
         {
-            Interact();
+            Interact(phonePanel);
         }
     }
 
@@ -30,11 +30,12 @@ public class PhoneCollisionHandler : MonoBehaviour
             canActivate = false;
         }
     }
-    public void Interact()
+    public void Interact(GameObject phonePanel)
     {
+        // player ile panel arasýnda bir etkileþim gerçekleþtir
         if (phonePanel != null)
         {
-            phonePanel.SetActive(true);
+            phonePanel.SetActive(!phonePanel.activeSelf); // Paneli aktif veya pasif yap
         }
     }
 
