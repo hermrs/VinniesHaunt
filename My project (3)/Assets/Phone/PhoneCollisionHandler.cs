@@ -2,17 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PhoneCollisionHandler : MonoBehaviour, PanelOpener
+public class PhoneCollisionHandler : MonoBehaviour
 {
     private bool canActivate = false;
     public GameObject phonePanel;
 
+
+
     private void Update()
     {
-        if (canActivate && Input.GetKeyDown(KeyCode.E))
+       
+        if (canActivate)
         {
-            Interact(phonePanel);
+            
+                PanelController.instance.OpenPanelWidthKey(phonePanel, KeyCode.E);
+                Debug.Log("panel açýldý");
+            
+            //panelController.OpenPanel(phonePanel);
         }
+
+        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -30,14 +39,7 @@ public class PhoneCollisionHandler : MonoBehaviour, PanelOpener
             canActivate = false;
         }
     }
-    public void Interact(GameObject phonePanel)
-    {
-        // player ile panel arasýnda bir etkileþim gerçekleþtir
-        if (phonePanel != null)
-        {
-            phonePanel.SetActive(!phonePanel.activeSelf); // Paneli aktif veya pasif yap
-        }
-    }
+  
 
 }
 

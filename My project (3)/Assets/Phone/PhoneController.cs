@@ -31,6 +31,6 @@ public class PhoneController : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         // Telefonu kapat
-        phonePanel.SetActive(false);
+        PanelController.instance.ClosePanel(phonePanel);
     }
 }
