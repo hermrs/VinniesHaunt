@@ -8,6 +8,8 @@ TagManager:
   - Cocuk
   - Key
   - Engel
+  - DuckTape
+  - Landmine
   layers:
   - Default
   - TransparentFX

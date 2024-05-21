@@ -23,6 +23,7 @@ public class StaminaControl : MonoBehaviour
         ManageStamina();
         MovePlayer();
     }
+    
 
     void ManageStamina()
     {

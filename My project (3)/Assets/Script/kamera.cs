@@ -12,7 +12,7 @@ public class kamera : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
     void LateUpdate()
     {
@@ -26,7 +26,7 @@ public class kamera : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        
-        transform.position = Vector3.Lerp(transform.position,Karakter.transform.position,10f);
+
+        transform.position = Vector3.Lerp(transform.position, Karakter.transform.position, 10f);
     }
 }

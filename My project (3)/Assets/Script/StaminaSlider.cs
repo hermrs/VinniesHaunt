@@ -17,6 +17,15 @@ public class StaminaSlider : MonoBehaviour
     void Update()
     {
         slider.value = staminaControl.stamina;
+
+        if(slider.value==slider.maxValue)
+        {
+            slider.gameObject.SetActive(false);
+        }
+        else
+        {
+            slider.gameObject.SetActive(true);
+        }
     }
 }
 
