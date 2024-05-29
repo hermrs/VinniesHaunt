@@ -7,19 +7,13 @@ public class PhoneCollisionHandler : MonoBehaviour
     private bool canActivate = false;
     public GameObject phonePanel;
 
-
-
     private void Update()
     {
        
         if (canActivate)
         {
-            
-            PanelController.instance.OpenPanelWidthKey(phonePanel, KeyCode.E);
-            
+            PanelController.instance.OpenPanelWidthKey(phonePanel, KeyCode.E);   
         }
-
-        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -37,10 +31,4 @@ public class PhoneCollisionHandler : MonoBehaviour
             canActivate = false;
         }
     }
-  
-
 }
-
-
-
-

@@ -11,6 +11,7 @@ TagManager:
   - DuckTape
   - Landmine
   - SoundVolume
+  - masaCamera
   layers:
   - Default
   - TransparentFX
