@@ -15,10 +15,8 @@ public class PhoneCollisionHandler : MonoBehaviour
         if (canActivate)
         {
             
-                PanelController.instance.OpenPanelWidthKey(phonePanel, KeyCode.E);
-                Debug.Log("panel açýldý");
+            PanelController.instance.OpenPanelWidthKey(phonePanel, KeyCode.E);
             
-            //panelController.OpenPanel(phonePanel);
         }
 
         

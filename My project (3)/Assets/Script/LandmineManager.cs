@@ -46,7 +46,7 @@ public class LandmineManager : MonoBehaviour
 
     public void UpdateLandmineUI()
     {
-        GameManager.Instance.UpdateLandmineCount(totalLandmines);
+        UIManager.Instance.UpdateLandmineCount(totalLandmines);
     }
 
     public IEnumerator CooldownInteraction(Collider collider)

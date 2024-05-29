@@ -23,15 +23,6 @@ public class PanelController : MonoBehaviour
         {
             OpenPanel(Panel);
         }
-        //if (PanelSetActive(Panel))
-        //{
-        //    Panel.SetActive(false);
-        //}
-        //else 
-        //{ 
-        //    Panel.SetActive(true); 
-        
-        //}
         
     }
     public void ClosePanel(GameObject panel)
@@ -52,15 +43,7 @@ public class PanelController : MonoBehaviour
         return false;
     }
 }
-//public void Interact(GameObject phonePanel)
-//{
-//    // player ile panel arasýnda bir etkileþim gerçekleþtir
-//    if (phonePanel != null)
-//    {
-//        phonePanel.SetActive(!phonePanel.activeSelf); // Paneli aktif veya pasif yap
-//    }
-//}
-// PanelOpener arayüzü
+
 public interface PanelOpener
 {
     void Interact(GameObject panel);

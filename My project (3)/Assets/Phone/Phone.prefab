@@ -522,7 +522,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6789954782082040238}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Phone, Assembly-CSharp
         m_MethodName: TaskOnClick
         m_Mode: 3
@@ -655,7 +655,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6789954782082040238}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Phone, Assembly-CSharp
         m_MethodName: TaskOnClick
         m_Mode: 3
@@ -788,7 +788,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6789954782082040238}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Phone, Assembly-CSharp
         m_MethodName: TaskOnClick
         m_Mode: 3
@@ -1457,7 +1457,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6789954782082040238}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Phone, Assembly-CSharp
         m_MethodName: TaskOnClick
         m_Mode: 3
@@ -1724,7 +1724,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6789954782082040238}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Phone, Assembly-CSharp
         m_MethodName: TaskOnClick
         m_Mode: 3
@@ -1857,7 +1857,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6789954782082040238}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Phone, Assembly-CSharp
         m_MethodName: TaskOnClick
         m_Mode: 3
@@ -2372,7 +2372,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6789954782082040238}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Phone, Assembly-CSharp
         m_MethodName: TaskOnClick
         m_Mode: 3
@@ -2773,7 +2773,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6789954782082040238}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Phone, Assembly-CSharp
         m_MethodName: TaskOnClick
         m_Mode: 3
@@ -3040,7 +3040,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6789954782082040238}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Phone, Assembly-CSharp
         m_MethodName: TaskOnClick
         m_Mode: 3
@@ -3248,7 +3248,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6789954782082040238}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Phone, Assembly-CSharp
         m_MethodName: TaskOnClick
         m_Mode: 3
@@ -3272,7 +3272,6 @@ GameObject:
   - component: {fileID: 3601965336093386797}
   - component: {fileID: 4234237735576664079}
   - component: {fileID: 914746154734655996}
-  - component: {fileID: 6789954782082040238}
   - component: {fileID: 5252028238945079746}
   m_Layer: 0
   m_Name: Phone
@@ -3370,37 +3369,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!114 &6789954782082040238
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8938755190925287696}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 984f233ba136f684398c6655355e1d13, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  numaraText: {fileID: 5361608948072737728}
-  tuslar:
-  - {fileID: 0}
-  - {fileID: 8360234269178261382}
-  - {fileID: 6852317071261791796}
-  - {fileID: 5494159070407555216}
-  - {fileID: 1500102614181425929}
-  - {fileID: 8246988360450128855}
-  - {fileID: 7431246420455645706}
-  - {fileID: 5359538845294285178}
-  - {fileID: 1291028620892197303}
-  - {fileID: 847546296832683127}
-  - {fileID: 7272073735938763855}
-  - {fileID: 1606019218990510552}
-  polisArandi: 0
-  tusSesi: {fileID: 8300000, guid: fa32c843c9e0cc641bdc5e4265276be4, type: 3}
-  polisSesi: {fileID: 8300000, guid: fa32c843c9e0cc641bdc5e4265276be4, type: 3}
-  audioSource: {fileID: 5252028238945079746}
-  phonePanel: {fileID: 8938755190925287696}
 --- !u!82 &5252028238945079746
 AudioSource:
   m_ObjectHideFlags: 0
