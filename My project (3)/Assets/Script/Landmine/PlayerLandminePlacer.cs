@@ -6,24 +6,13 @@ public class PlayerLandminePlacer : MonoBehaviour
 {
     public Transform childTransform;
 
-    void Start()
-    {
-        if (childTransform == null)
-        {
-            childTransform = transform.Find("Cocuk");
-            if (childTransform == null)
-            {
-                Debug.LogError("Bebe Transform bulunamadý. Lütfen sahnede objeyi kontrol edin.");
-            }
-        }
-    }
-
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.V))
         {
             Vector3 childPosition = childTransform.position;
-            LandmineManager.Instance.CreateLandmine(childPosition);
+            Vector3 landminePosition = new Vector3(childPosition.x, childPosition.y - childTransform.localScale.y, childPosition.z);//çocuðun ayaðýnýn altýna koymasý için
+            LandmineManager.Instance.CreateLandmine(landminePosition);
         }
     }
 

@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     private int totalKeys = 3;
     private int collectedKeys = 0;
     private bool hasDuckTape = false;
-
+    public bool allKeysCollected = false;
     private void Awake()
     {
         if (Instance == null)
@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour
 
     private void AllKeysCollected()
     {
+        allKeysCollected = true;
         Debug.Log("Tüm anahtarlar toplandý!");
         // Kapý açma gibi iþlemler burada yapýlabilir.
     }

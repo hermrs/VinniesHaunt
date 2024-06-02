@@ -9,7 +9,9 @@ public class UIManager : MonoBehaviour
     public TMP_Text keysCollectedText;  // TMP_Text bileþenini burada tanýmlýyoruz
     public Image duckTapeImage;
     public TMP_Text landmineCountText;
-
+    public Image keyXImage;
+    public Image keyYImage;
+    public Image keyZImage;
     private void Awake()
     {
         if (Instance == null)
@@ -29,13 +31,47 @@ public class UIManager : MonoBehaviour
         {
             duckTapeImage.enabled = false; // Oyun baþladýðýnda DuckTape görüntüsünü gizle
         }
+        if(keyXImage != null)//x Anahtarý baþladýðýnda görünmez
+        {
+            keyXImage.enabled = false;
+        }
+        if (keyYImage != null)//y Anahtarý baþladýðýnda görünmez
+        {
+            keyYImage.enabled = false;
+        }
+        if (keyZImage != null)//z Anahtarý baþladýðýnda görünmez
+        {
+            keyZImage.enabled = false;
+        }
     }
 
     public void UpdateKeyUI(int collectedKeys)
     {
         if (keysCollectedText != null)
         {
-            keysCollectedText.text = "Toplanan Anahtarlar: " + collectedKeys;
+            keysCollectedText.text = "" + collectedKeys;
+        }
+    }
+
+    public void UpdateKeyXImage()
+    {
+        if (keyXImage != null)//x Anahtarý alýndýðýnda görünür olur
+        {
+            keyXImage.enabled = true;
+        }
+    }
+    public void UpdateKeyYImage()
+    {
+        if (keyYImage != null)//y Anahtarý alýndýðýnda görünür olur
+        {
+            keyYImage.enabled = true;
+        }
+    }
+    public void UpdateKeyZImage()
+    {
+        if (keyZImage != null)//z Anahtarý alýndýðýnda görünür olur
+        {
+            keyZImage.enabled = true;
         }
     }
 
@@ -51,7 +87,7 @@ public class UIManager : MonoBehaviour
     {
         if (landmineCountText != null)
         {
-            landmineCountText.text = "Mayýnlar: " + count;
+            landmineCountText.text = "" + count;
         }
     }
 }
