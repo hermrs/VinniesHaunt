@@ -16,7 +16,7 @@ public class Hide : MonoBehaviour
     {
         
         masaCamera = GameObject.Find("MasaCamera");
-        masaCamera.SetActive(false);
+        PanelController.instance.ClosePanel(masaCamera);
     }
     private void Update()
     {
@@ -25,20 +25,20 @@ public class Hide : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        
-        if (other.CompareTag("Cocuk")&&isActive)
+
+        if (other.CompareTag("Cocuk") && isActive)
         {
-           
+
             other.gameObject.SetActive(false);
-            masaCamera.SetActive(true);
+            PanelController.instance.OpenPanel(masaCamera);
             isHide = true;
             minHideTime = 0.0f;
-            
+
         }
     }
     private void OnTriggerExit(Collider other)
     {
-        if(other.CompareTag("Cocuk"))
+        if (other.CompareTag("Cocuk"))
         {
             isActive = true;
         }
@@ -48,11 +48,11 @@ public class Hide : MonoBehaviour
     {
         if (isHide)
         {
-            minHideTime += Time.deltaTime; 
+            minHideTime += Time.deltaTime;
 
             if (minHideTime >= maxHideTime)
             {
-                masaCamera.SetActive(false);
+                PanelController.instance.ClosePanel(masaCamera);
                 isHide = false;
                 isActive = false;
                 Cocuk.gameObject.SetActive(true);
@@ -61,5 +61,5 @@ public class Hide : MonoBehaviour
             Debug.Log(minHideTime);
         }
     }
-    
+
 }

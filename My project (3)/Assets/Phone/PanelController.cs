@@ -29,7 +29,7 @@ public class PanelController : MonoBehaviour
     {
         panel.SetActive(false);
     }
-    void OpenPanel(GameObject panel)
+    public void OpenPanel(GameObject panel)
     {
         panel.SetActive(true);
     }

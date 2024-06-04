@@ -5,7 +5,6 @@ public class El_Feneri : MonoBehaviour
 {
     public GameObject Light;
     bool isLight;
-    bool shouldContinue = false;
 
     void Start()
     {
@@ -16,15 +15,12 @@ public class El_Feneri : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(1f);
             isLight = !isLight;
             Light.SetActive(isLight);
             StartCoroutine(FlashLight2(0.3f));
-            
-            isLight = !isLight;
-            //StartCoroutine(FlashLight2(0.2f));
+            StartCoroutine(FlashLight2(0.4f));
             Light.SetActive(isLight);
-            Debug.Log("el feneri 2sn çalýþtý");
         }
     }
     IEnumerator FlashLight2(float time)
