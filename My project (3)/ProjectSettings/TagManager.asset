@@ -12,6 +12,8 @@ TagManager:
   - Landmine
   - SoundVolume
   - masaCamera
+  - Pooh
+  - Oyuncak
   layers:
   - Default
   - TransparentFX

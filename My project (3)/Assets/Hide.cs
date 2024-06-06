@@ -1,46 +1,51 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static System.Runtime.CompilerServices.RuntimeHelpers;
 
-public class Hide : MonoBehaviour
+public class Hide : MonoBehaviour, ICollectible
 {
     public GameObject masaCamera;
     public float maxHideTime = 10f;
     public float minHideTime = 0f;
     public GameObject Cocuk;
     bool isActive = true;
+  
 
     bool isHide;
 
     private void Start()
     {
-        
+     
         masaCamera = GameObject.Find("MasaCamera");
         PanelController.instance.ClosePanel(masaCamera);
     }
     private void Update()
     {
+        KeyCod();
         HideController();
     }
 
-    void OnTriggerEnter(Collider other)
+    public void Collect()
     {
-
-        if (other.CompareTag("Cocuk") && isActive)
-        {
-
-            other.gameObject.SetActive(false);
-            PanelController.instance.OpenPanel(masaCamera);
-            isHide = true;
-            minHideTime = 0.0f;
-
-        }
+        Cocuk.gameObject.SetActive(false);
+        PanelController.instance.OpenPanel(masaCamera);
+        isHide = true;
+        minHideTime = 0.0f;
     }
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Cocuk"))
         {
             isActive = true;
+          
+        }
+    }
+    void KeyCod()
+    {
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            minHideTime = 10;
         }
     }
 
@@ -55,7 +60,7 @@ public class Hide : MonoBehaviour
                 PanelController.instance.ClosePanel(masaCamera);
                 isHide = false;
                 isActive = false;
-                Cocuk.gameObject.SetActive(true);
+                PanelController.instance.OpenPanel(Cocuk);
 
             }
             Debug.Log(minHideTime);

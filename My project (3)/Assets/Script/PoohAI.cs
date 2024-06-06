@@ -1,14 +1,17 @@
+using UnityEditor.AnimatedValues;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 
 public class PoohAI : MonoBehaviour
 {
-    NavMeshAgent agent;
+    public Animator animator;
+    public NavMeshAgent agent;
     public float maxMenzil = 15f;
     public LayerMask obstacleLayer;
     public float randomRadius = 20f; 
-    public float waitTime = 3f; 
+    public float waitTime = 3f;
+    public float newSpeed = 4f;
 
     private bool isWaiting = false;
     private float waitTimer;
@@ -16,12 +19,17 @@ public class PoohAI : MonoBehaviour
 
     void Start()
     {
+        animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
         SetRandomDestination();
+        agent.speed = newSpeed;
+
     }
+
 
     private void Update()
     {
+        Debug.Log(agent.speed);
         if (isWaiting)
         {
             waitTimer -= Time.deltaTime;
@@ -63,7 +71,13 @@ public class PoohAI : MonoBehaviour
                 waitTimer = waitTime;
             }
         }
+        if(agent.speed>0) 
+        {
+            animator.SetBool("isWalk", true);
+            Debug.Log("ANÝMASYON ÇALIÞTI");
+        }
     }
+
 
     bool IsTargetVisible(GameObject hedef)
     {
