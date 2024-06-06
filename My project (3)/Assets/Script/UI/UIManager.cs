@@ -31,7 +31,7 @@ public class UIManager : MonoBehaviour
         {
             duckTapeImage.enabled = false; // Oyun baþladýðýnda DuckTape görüntüsünü gizle
         }
-        if(keyXImage != null)//x Anahtarý baþladýðýnda görünmez
+        if (keyXImage != null)//x Anahtarý baþladýðýnda görünmez
         {
             keyXImage.enabled = false;
         }
@@ -53,26 +53,17 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    public void UpdateKeyXImage()
+    public void UpdateImageUI(Image image)
     {
-        if (keyXImage != null)//x Anahtarý alýndýðýnda görünür olur
+        if (image != null)
         {
-            keyXImage.enabled = true;
+            image.enabled = true;
         }
     }
-    public void UpdateKeyYImage()
+
+    public void UpdateKeyImage(Image image)
     {
-        if (keyYImage != null)//y Anahtarý alýndýðýnda görünür olur
-        {
-            keyYImage.enabled = true;
-        }
-    }
-    public void UpdateKeyZImage()
-    {
-        if (keyZImage != null)//z Anahtarý alýndýðýnda görünür olur
-        {
-            keyZImage.enabled = true;
-        }
+        UpdateImageUI(image);
     }
 
     public void UpdateDuckTapeUI()

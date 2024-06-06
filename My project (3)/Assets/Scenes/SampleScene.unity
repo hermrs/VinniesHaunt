@@ -7368,7 +7368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf49eb3258526944eb015248f0ca2edd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allKeysCollected: 0
+  hasDuckTape: 0
 --- !u!1 &1904905422
 GameObject:
   m_ObjectHideFlags: 0

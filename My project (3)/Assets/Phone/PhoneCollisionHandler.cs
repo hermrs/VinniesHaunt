@@ -10,7 +10,7 @@ public class PhoneCollisionHandler : MonoBehaviour
     private void Update()
     {
        
-        if (canActivate)
+        if (canActivate&&GameManager.Instance.hasDuckTape==true)
         {
             PanelController.instance.OpenPanelWidthKey(phonePanel, KeyCode.E);   
         }

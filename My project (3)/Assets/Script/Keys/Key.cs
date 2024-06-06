@@ -7,7 +7,7 @@ public class Key : MonoBehaviour, ICollectible
     public void Collect()
     {
         GameManager.Instance.OnKeyCollected();
-        UIManager.Instance.UpdateKeyXImage();
+        UIManager.Instance.UpdateKeyImage(UIManager.Instance.keyXImage);
         Destroy(gameObject);
     }
 }

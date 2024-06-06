@@ -1,15 +1,33 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+//using System.Collections;
+//using System.Collections.Generic;
+//using UnityEngine;
 
-public class KeyY : MonoBehaviour, ICollectible
+//public class KeyY : MonoBehaviour, ICollectible
+//{
+//    public static bool gotTheYKey = false;
+//    public void Collect()
+//    {
+//        gotTheYKey = true;
+//        GameManager.Instance.OnKeyCollected();
+//        UIManager.Instance.UpdateKeyImage(UIManager.Instance.keyYImage);
+//        Destroy(gameObject);
+//    }
+//}
+using UnityEngine;
+using UnityEngine.UI;
+
+public class KeyY : BaseKey
 {
     public static bool gotTheYKey = false;
-    public void Collect()
+
+    public override void Collect()
     {
+        base.Collect();
         gotTheYKey = true;
-        GameManager.Instance.OnKeyCollected();
-        UIManager.Instance.UpdateKeyYImage();
-        Destroy(gameObject);
+    }
+
+    protected override Image GetKeyImage()
+    {
+        return UIManager.Instance.keyYImage;
     }
 }

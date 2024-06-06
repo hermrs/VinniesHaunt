@@ -11,5 +11,8 @@ public class Son : MonoBehaviour, IDestroyable
             Destroy(gameObject); //animasyon girecek bunun yerine OYUN SONU
         }
     }
-
+    public void Interact()
+    {
+        Destroyable();
+    }
 }
