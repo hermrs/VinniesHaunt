@@ -11,7 +11,7 @@ public class PoohAI : MonoBehaviour
     public LayerMask obstacleLayer;
     public float randomRadius = 20f; 
     public float waitTime = 3f;
-    public float newSpeed = 4f;
+    public float newSpeed;
 
     private bool isWaiting = false;
     private float waitTimer;
@@ -22,8 +22,7 @@ public class PoohAI : MonoBehaviour
         animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
         SetRandomDestination();
-        agent.speed = newSpeed;
-
+        newSpeed = 0.4f;
     }
 
 
@@ -35,6 +34,7 @@ public class PoohAI : MonoBehaviour
             waitTimer -= Time.deltaTime;
             if (waitTimer <= 0f)
             {
+                newSpeed = .3f;
                 isWaiting = false;
                 SetRandomDestination();
             }
@@ -61,23 +61,20 @@ public class PoohAI : MonoBehaviour
         if (enYakinHedef != null && IsTargetVisible(enYakinHedef))
         {
             agent.SetDestination(enYakinHedef.transform.position);
+            newSpeed = 1f; 
         }
         else
         {
-            // Hedef yoksa veya hedef görünür deðilse rastgele hareket et
+            
             if (!agent.pathPending && agent.remainingDistance < 0.5f)
             {
                 isWaiting = true;
                 waitTimer = waitTime;
+                newSpeed = 0f; 
             }
         }
-        if(agent.speed>0) 
-        {
-            animator.SetBool("isWalk", true);
-            Debug.Log("ANÝMASYON ÇALIÞTI");
-        }
+        animator.SetFloat("speed", newSpeed);
     }
-
 
     bool IsTargetVisible(GameObject hedef)
     {
@@ -109,7 +106,7 @@ public class PoohAI : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Cocuk"))
         {
-            // Oyun bitirme iþlemini gerçekleþtir
+           
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
