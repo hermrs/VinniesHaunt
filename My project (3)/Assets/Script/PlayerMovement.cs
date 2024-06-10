@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     StaminaControl stamina;
     AudioManager audios;
     public Transform kamera;
-    public float walkSpeed = 5f;
+    public float walkSpeed = 50f;
     public float runSpeedMultiplier = 1.5f;
     private Rigidbody rb;
     private Vector3 moveDirection;
