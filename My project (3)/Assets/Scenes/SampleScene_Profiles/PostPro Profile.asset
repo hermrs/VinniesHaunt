@@ -1394,7 +1394,7 @@ MonoBehaviour:
     value: 1
   filtering:
     overrideState: 1
-    value: {x: 74.64302, y: 92.35968}
+    value: {x: 57.920975, y: 96.76022}
   minLuminance:
     overrideState: 1
     value: 2
