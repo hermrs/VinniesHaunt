@@ -1,0 +1,389 @@
+fileFormatVersion: 2
+guid: cbd75d2566a238a44bb565b868f16ca6
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BEJ
+    second: {fileID: 2100000, guid: 098c6efd6cd3db94286e9309442f13ef, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dolap
+    second: {fileID: 2100000, guid: 5ad1787fa0b6c734f8e50eb61b8af832, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "D\u0131\u015F"
+    second: {fileID: 2100000, guid: 00b4934d33e893945971baebdcdf22a3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Evye
+    second: {fileID: 2100000, guid: 5532d5c42bf10ec47b8d4cd2af91a831, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "F\u0131r\u0131n"
+    second: {fileID: 2100000, guid: 1be98dc9abb571c43907012773eaba3c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Kapak
+    second: {fileID: 2100000, guid: 95a8de52b0de35548955dd60e690a109, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Kulp
+    second: {fileID: 2100000, guid: 8cbd8cc934ec34342814149433ec24a1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Kulp.001
+    second: {fileID: 2100000, guid: 5557e4386f9ab8c458f9b99e3eb2388d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat
+    second: {fileID: 2100000, guid: 07bef8bfbf1f5094998217732e2340d8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_1
+    second: {fileID: 2100000, guid: 0a9e9c7c645306a488caadf8bdafea90, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: 7974a881dd5ac8d4ea792624c8ac0701, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Musluk
+    second: {fileID: 2100000, guid: dc4405caa0fedf44680f2c166b52121e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sebzelik
+    second: {fileID: 2100000, guid: 9ea3624937e3dfa4e850224e990169df, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: beyaz
+    second: {fileID: 2100000, guid: 62e3694bc14f0104e8c82bfeb6f4c577, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bodrum yer
+    second: {fileID: 2100000, guid: 59f4ac491eba53a458434cbb6c01a678, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: duvar
+    second: {fileID: 2100000, guid: 5bd1a8b5638ab2a41af69c2ff79c4286, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: duvarr beuaz
+    second: {fileID: 2100000, guid: 5d0875df5aeab0b48a72397c4e3c7083, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: glass
+    second: {fileID: 2100000, guid: 423bb823b7f4ddc4fafe645e9cab7194, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: parke
+    second: {fileID: 2100000, guid: d91d0236d76769c4d89ad7a6e07d2de2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: yesil
+    second: {fileID: 2100000, guid: 041a20087c865044aad4c991d194c2c8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u0130\xE7"
+    second: {fileID: 2100000, guid: 88441a22d8249a64d9ffdafa789a2a85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u0130\xE7.001"
+    second: {fileID: 2100000, guid: 66b2a7903db6b8342af0a9739e46fb85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u0130\xE7.002"
+    second: {fileID: 2100000, guid: 44fcbf893193d04449f39872cf7c1f13, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Bricks094_4K-PNG_Color
+    second: {fileID: 2800000, guid: 13bf7e56dfe20d34a8965e2b2d2bd875, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Bricks094_4K-PNG_NormalGL
+    second: {fileID: 2800000, guid: 9097c9282824a374f9f424b8320289b2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Bricks094_4K-PNG_Roughness
+    second: {fileID: 2800000, guid: 147175f0f3c1b4a428cf9b35eca9eeab, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: BuzdolabKulp
+    second: {fileID: 2800000, guid: cf9313acaf664474ba5d2a37a7bbfef9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: BuzdolabSebzelik
+    second: {fileID: 2800000, guid: d6579580c470bb1438a296bc39fb7dc2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: BuzdolabUVHazr
+    second: {fileID: 2800000, guid: f13f9d83692875742930006be7424d48, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CabinWood
+    second: {fileID: 2800000, guid: 8901b8326c2808f478ed3daa70e4fdb9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Evye
+    second: {fileID: 2800000, guid: 41a073892cb544142898e48194a232f3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: FrnUV
+    second: {fileID: 2800000, guid: 064412fe5c6b2e64ba791176d943ac64, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Musluk
+    second: {fileID: 2800000, guid: 327ba9c597935264ea8e79a9ecac898d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: RoofingTiles012A_4K-PNG_Color
+    second: {fileID: 2800000, guid: ced779648b3325b4994b1f91f0a5be0e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: RoofingTiles012A_4K-PNG_NormalGL
+    second: {fileID: 2800000, guid: 74cc9f6ef3cec10458b2a4a7f7eb9383, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: RoofingTiles012A_4K-PNG_Opacity
+    second: {fileID: 2800000, guid: 06326b24e0e86684c967336d0a280f7f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: RoofingTiles012A_4K-PNG_Roughness
+    second: {fileID: 2800000, guid: 3c0f2aa0d3113bf41bf08251ec6adec2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: beige_wall_001_diff_4k
+    second: {fileID: 2800000, guid: 486c10d1c308c9940a9066a2ef59a14b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: beige_wall_001_nor_gl_4k
+    second: {fileID: 2800000, guid: 4262fe1956ba9b44884450dc3cfb5ec0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: beige_wall_001_rough_4k
+    second: {fileID: 2800000, guid: f1c1f5d9d624d184b92c87c089b2f7e3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: concrete_floor_worn_001_diff_4k
+    second: {fileID: 2800000, guid: 63933871f4a8ca24982f7cda1ee407aa, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: concrete_floor_worn_001_nor_gl_4k
+    second: {fileID: 2800000, guid: e320b0c59c0b480489eccb9382dbb7e1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: concrete_floor_worn_001_rough_4k
+    second: {fileID: 2800000, guid: 51154c6d1e855424d8067228fa53a1fa, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: concrete_wall_008_diff_4k
+    second: {fileID: 2800000, guid: d3e0444b22cdeda498803fd7103fbde3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: concrete_wall_008_nor_gl_4k
+    second: {fileID: 2800000, guid: 641a9342132487b44996beb539c6135d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: concrete_wall_008_rough_4k
+    second: {fileID: 2800000, guid: 6b21beed8ba241a4f9e6f5daa3c68c24, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: green_metal_rust_diff_4k
+    second: {fileID: 2800000, guid: 9c679f054ea27ae46a284bbddafea463, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: green_metal_rust_nor_gl_4k
+    second: {fileID: 2800000, guid: ce2a1fd288706084d93e2ba2786a0b39, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: green_metal_rust_rough_4k
+    second: {fileID: 2800000, guid: e4a9cba22cf8f6346839e186e3ca7cc0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: leather_white_diff_4k
+    second: {fileID: 2800000, guid: aedc00f8862ff0144819ce4462b47029, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: leather_white_nor_gl_4k
+    second: {fileID: 2800000, guid: ef803d52cd7843c40a58d0a91a425bc8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: leather_white_rough_4k
+    second: {fileID: 2800000, guid: f433b0f85d7bfc149b43bd9fdf0a9199, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: mermer
+    second: {fileID: 2800000, guid: 4375cecf5475cae47bf3593064a44a8b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: wood_floor_worn_diff_4k
+    second: {fileID: 2800000, guid: dc4f3648b75d9a740aa1a9dcbb0ab906, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: wood_floor_worn_nor_gl_4k
+    second: {fileID: 2800000, guid: 4867348e31b09cf49b7cf66106817f56, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: wood_floor_worn_rough_4k
+    second: {fileID: 2800000, guid: 70b81907208287c46808a7ad2298b86c, type: 3}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

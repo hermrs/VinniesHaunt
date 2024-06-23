@@ -9,7 +9,7 @@ public class PoohAI : MonoBehaviour
     public NavMeshAgent agent;
     public float maxMenzil = 15f;
     public LayerMask obstacleLayer;
-    public float randomRadius = 20f; 
+    public float randomRadius = 20f;
     public float waitTime = 3f;
     public float newSpeed;
 
@@ -28,7 +28,6 @@ public class PoohAI : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(agent.speed);
         if (isWaiting)
         {
             waitTimer -= Time.deltaTime;
@@ -41,6 +40,26 @@ public class PoohAI : MonoBehaviour
             return;
         }
 
+        UpdateTarget(); // En yak?n hedefi güncelle
+
+        if (enYakinHedef != null && IsTargetVisible(enYakinHedef))
+        {
+            agent.SetDestination(enYakinHedef.transform.position); // Güncel hedefe do?ru git
+            newSpeed = 1f;
+        }
+        else
+        {
+            if (!agent.pathPending && agent.remainingDistance < 0.5f)
+            {
+                isWaiting = true;
+                waitTimer = waitTime;
+                newSpeed = 0f;
+            }
+        }
+        animator.SetFloat("speed", newSpeed);
+    }
+    void UpdateTarget()
+    {
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, maxMenzil);
         float enYakinMesafe = Mathf.Infinity;
         enYakinHedef = null;
@@ -57,24 +76,9 @@ public class PoohAI : MonoBehaviour
                 }
             }
         }
-
-        if (enYakinHedef != null && IsTargetVisible(enYakinHedef))
-        {
-            agent.SetDestination(enYakinHedef.transform.position);
-            newSpeed = 1f; 
-        }
-        else
-        {
-            
-            if (!agent.pathPending && agent.remainingDistance < 0.5f)
-            {
-                isWaiting = true;
-                waitTimer = waitTime;
-                newSpeed = 0f; 
-            }
-        }
-        animator.SetFloat("speed", newSpeed);
     }
+
+
 
     bool IsTargetVisible(GameObject hedef)
     {
@@ -106,7 +110,7 @@ public class PoohAI : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Cocuk"))
         {
-           
+
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }

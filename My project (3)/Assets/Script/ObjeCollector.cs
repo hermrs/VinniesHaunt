@@ -88,6 +88,11 @@ public class ObjeCollector : MonoBehaviour
         {
             destroyable.Destroyable();
         }
+        ITouchable touchable = collision.gameObject.GetComponent<ITouchable>();
+        if (touchable != null)
+        {
+            touchable.Touch();
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -134,4 +139,8 @@ public interface IInteractable
 public interface IDestroyable 
 {
     void Destroyable();
+}
+public interface ITouchable
+{
+    void Touch();
 }

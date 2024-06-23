@@ -1,41 +1,52 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class PlayerMovement : MonoBehaviour
 {
     StaminaControl stamina;
     AudioManager audios;
     public Transform kamera;
-    public float walkSpeed = 50f;
-    public float runSpeedMultiplier = 1.5f;
-    private Rigidbody rb;
-    private Vector3 moveDirection;
+    public float walkSpeed = 5f; // Yürüme hýzý
+    public float runSpeedMultiplier = 1.5f; // Koþma hýzýnýn çarpaný
+    NavMeshAgent agent;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
         stamina = GetComponent<StaminaControl>();
         audios = GetComponent<AudioManager>();
+        agent = GetComponent<NavMeshAgent>();
     }
 
     void Update()
     {
-        moved();
         if (!stamina.isRunning && !stamina.isCooldown)
         {
             audios.AudioStop(KeyCode.Q);
             audios.AudioStart(KeyCode.Q);
         }
+
+        Move();
     }
-    void moved()
+
+    void Move()
     {
+        // Yatay ve dikey giriþleri al
         float horizontalInput = Input.GetAxisRaw("Horizontal");
         float verticalInput = Input.GetAxisRaw("Vertical");
+
+        // Kamera yönünü al
         Vector3 kameraYonu = kamera.forward;
         kameraYonu.y = 0f;
-        Vector3 hareketYonu = (horizontalInput * kamera.right + verticalInput * kameraYonu).normalized;
-        rb.velocity = hareketYonu * walkSpeed;
 
+        // Hareket yönünü hesapla
+        Vector3 hareketYonu = (horizontalInput * kamera.right + verticalInput * kameraYonu).normalized;
+
+        // Hareket yönünü ve hýzý belirle
+        Vector3 moveDirection = hareketYonu * walkSpeed;
+
+        // Hareket yönünü NavMeshAgent'e ayarla
+        agent.Move(moveDirection * Time.deltaTime);
     }
 }
