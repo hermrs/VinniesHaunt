@@ -9,6 +9,7 @@ public class Son : MonoBehaviour, IDestroyable
         if (GameManager.Instance.allKeysCollected==true)
         {
             Destroy(gameObject); //animasyon girecek bunun yerine OYUN SONU
+            // cenko oyun sonu ekraný ekle
         }
     }
     public void Interact()
