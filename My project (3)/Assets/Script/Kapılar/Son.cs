@@ -1,19 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class Son : MonoBehaviour, IDestroyable
+public class Son : MonoBehaviour, IInteractable
 {
-    public void Destroyable()
-    {
-        if (GameManager.Instance.allKeysCollected==true)
-        {
-            Destroy(gameObject); //animasyon girecek bunun yerine OYUN SONU
-            // cenko oyun sonu ekraný ekle
-        }
-    }
+   
     public void Interact()
     {
-        Destroyable();
+
+        if (GameManager.Instance.allKeysCollected == true)
+        {
+            SceneManager.LoadScene("GoodFin");  //animasyon girecek bunun yerine OYUN SONU
+            Debug.Log("oopss");
+            // cenko oyun sonu ekraný ekle
+        }
     }
 }
