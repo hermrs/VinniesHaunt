@@ -7,6 +7,7 @@ using UnityEngine;
 public class DoorControl : MonoBehaviour ,ICollectible,ITouchable
 {
     Animator animDoor;
+    public AudioSource audioSource;
     private bool isOpen = false;
     private void Start()
     {
@@ -60,6 +61,11 @@ public class DoorControl : MonoBehaviour ,ICollectible,ITouchable
         bool isOpen = animDoor.GetBool("openDoor");
 
         animDoor.SetBool("openDoor", !isOpen);
+
+        if (audioSource != null)
+        {
+            audioSource.Play();
+        }
 
     }
 

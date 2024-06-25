@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Son : MonoBehaviour, IInteractable
+public class Son : MonoBehaviour, IDestroyable
 {
-   
-    public void Interact()
-    {
 
+    public void Destroyable()
+    {
         if (GameManager.Instance.allKeysCollected == true)
         {
             SceneManager.LoadScene("GoodFin");  //animasyon girecek bunun yerine OYUN SONU
-            Debug.Log("oopss");
-            // cenko oyun sonu ekraný ekle
         }
+    }
+    public void Interact()
+    {
+        Destroyable();
     }
 }

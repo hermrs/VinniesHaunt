@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PhoneController : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class PhoneController : MonoBehaviour
         {
             Debug.Log("polis arandý");
             StartCoroutine(KapatmaBekle());
+            SceneManager.LoadScene("GoodFin");
         }
 
     }
