@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     StaminaControl stamina;
     AudioManager audios;
     public Transform kamera;
-    public float walkSpeed = 5f; // Yürüme hýzý
+    public float walkSpeed = 2f; // Yürüme hýzý
     public float runSpeedMultiplier = 1.5f; // Koþma hýzýnýn çarpaný
     NavMeshAgent agent;
 

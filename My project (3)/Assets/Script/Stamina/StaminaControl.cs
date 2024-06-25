@@ -63,11 +63,11 @@ public class StaminaControl : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift) && StaminaValueController(0) && !isCooldown && Input.GetKey(KeyCode.W))
         {
             isRunning = true;
-            movement.walkSpeed = 100f;
+            movement.walkSpeed = 35f;
         }
         else
         {
-            movement.walkSpeed = 50f;
+            movement.walkSpeed = 15f;
             isRunning = false;
         }
 

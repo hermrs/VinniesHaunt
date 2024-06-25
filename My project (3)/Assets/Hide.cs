@@ -9,6 +9,7 @@ public class Hide : MonoBehaviour, ICollectible
     public float maxHideTime = 10f;
     public float minHideTime = 0f;
     public GameObject Cocuk;
+    public GameObject FlashLight;
     bool isActive = true;
   
 
@@ -28,6 +29,7 @@ public class Hide : MonoBehaviour, ICollectible
 
     public void Collect()
     {
+        FlashLight.gameObject.SetActive(false);
         Cocuk.gameObject.SetActive(false);
         PanelController.instance.OpenPanel(masaCamera);
         isHide = true;
@@ -61,6 +63,7 @@ public class Hide : MonoBehaviour, ICollectible
                 isHide = false;
                 isActive = false;
                 PanelController.instance.OpenPanel(Cocuk);
+                PanelController.instance.OpenPanel(FlashLight);
 
             }
             Debug.Log(minHideTime);
